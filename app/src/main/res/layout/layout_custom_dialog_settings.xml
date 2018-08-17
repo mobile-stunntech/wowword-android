@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/curve_shape">
+
+    <ImageView
+        android:id="@+id/icon_utilities"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_header_utilities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/button_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_btn_windowclose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_utilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Utilities"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_utilities" />
+
+    <include
+        android:id="@+id/view_help"
+        layout="@layout/layout_help"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_website"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_utilities" />
+
+    <include
+        android:id="@+id/view_website"
+        layout="@layout/layout_website"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_help"
+        app:layout_constraintEnd_toStartOf="@id/view_social"
+        app:layout_constraintStart_toEndOf="@+id/view_help"
+        app:layout_constraintTop_toTopOf="@+id/view_help" />
+
+
+    <include
+        android:id="@+id/view_social"
+        layout="@layout/layout_social"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_website"
+        app:layout_constraintEnd_toStartOf="@id/view_voice"
+        app:layout_constraintStart_toEndOf="@+id/view_website"
+        app:layout_constraintTop_toTopOf="@+id/view_website" />
+
+
+    <include
+        android:id="@+id/view_voice"
+        layout="@layout/layout_voiceover"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_social"
+        app:layout_constraintEnd_toStartOf="@id/view_email"
+        app:layout_constraintStart_toEndOf="@+id/view_social"
+        app:layout_constraintTop_toTopOf="@+id/view_social" />
+
+
+    <include
+        android:id="@+id/view_email"
+        layout="@layout/layout_email"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_voice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view_voice"
+        app:layout_constraintTop_toTopOf="@+id/view_voice" />
+
+</android.support.constraint.ConstraintLayout>

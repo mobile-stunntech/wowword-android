@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.stunntech.wowword.MainActivity">
+
+    <include
+        android:id="@+id/tool_bar_container"
+        layout="@layout/layout_home_screen_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/view_business"
+        layout="@layout/layout_business_inner_view"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toStartOf="@id/view_power"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar_container"
+        android:layout_marginRight="8dp" />
+
+
+    <include
+        android:id="@+id/view_power"
+        layout="@layout/layout_power_inner_view"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toStartOf="@id/view_hot"
+        app:layout_constraintStart_toEndOf="@id/view_business"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar_container"
+        android:layout_marginRight="8dp" />
+
+    <include
+        android:id="@+id/view_hot"
+        layout="@layout/layout_hot_inner_view"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toStartOf="@id/view_street"
+        app:layout_constraintStart_toEndOf="@id/view_power"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar_container"
+        android:layout_marginRight="8dp" />
+
+    <include
+        android:id="@+id/view_street"
+        layout="@layout/layout_street_inner_view"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toStartOf="@id/view_crude"
+        app:layout_constraintStart_toEndOf="@id/view_hot"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar_container" />
+
+    <include
+        android:id="@+id/view_crude"
+        layout="@layout/layout_crude_inner_view"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_street"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar_container"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/button_archive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_header_archive"
+        app:layout_constraintBottom_toTopOf="@+id/text_archive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_archive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Archive"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
